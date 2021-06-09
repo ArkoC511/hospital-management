@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<head>
+  <title>BookMyDoc - Login</title>
+  <link rel="stylesheet" href="css/signup.css" />
+  <!-- <script src="./js/signup.js"></script> -->
+</head>
+
+<body>
+  <section>
+    <header>
+      <a href="landing.html"><img src="assets/logo.png" class="logo" /></a>
+      <ul>
+        <li class="login"><a href="adminsignup.html">Login as Admin</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <h2>Welcome to <span>BookMyDoc</span></h2>
+      <div class="container" id="container">
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="#"><img src="assets/google.png" class="social" /></a>
+              <a href="#"><img src="assets/facebook.png" class="social" /></a>
+              <a href="#"><img src="assets/twitter.png" class="social" /></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+          </form>
+        </div>
+        <div class="form-container sign-up-container">
+          <form id="signup-form">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="#"><img src="assets/google.png" class="social" /></a>
+              <a href="#"><img src="assets/facebook.png" class="social" /></a>
+              <a href="#"><img src="assets/twitter.png" class="social" /></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <input type="phone number" placeholder="Phone Number" />
+            <input type="medid" placeholder="Medical ID No." />
+            <button type="submit" value="Submit">Sign Up</button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-right">
+              <h1>Welcome Back!</h1>
+              <p>To keep connected with us please login</p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-left">
+              <h1>Hello!</h1>
+              <p>Register with us and book your appointments anytime.</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyAAGPTuhsNt7LV3-cdxpAJEAPA1QvWnYo8",
+      authDomain: "hospital-management-568b9.firebaseapp.com",
+      projectId: "hospital-management-568b9",
+      storageBucket: "hospital-management-568b9.appspot.com",
+      messagingSenderId: "548496970789",
+      appId: "1:548496970789:web:95c38253c330f2a1301bcc",
+      measurementId: "G-8V4CGKW88F"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    firebase.analytics();
+  </script>
+</body>
+<script src="./js/signup.js"></script>
+
+</html>
